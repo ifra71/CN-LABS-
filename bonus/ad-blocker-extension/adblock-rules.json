@@ -1,0 +1,23 @@
+[
+    {
+      "id": 1,
+      "action": {
+        "type": "block"
+      },
+      "condition": {
+        "urlFilter": "*://gomovies.sx/*ads*",
+        "resourceTypes": ["image", "script", "xmlhttprequest"]
+      }
+    },
+    {
+      "id": 2,
+      "action": {
+        "type": "block"
+      },
+      "condition": {
+        "urlFilter": "*://*/*doubleclick.net*",
+        "resourceTypes": ["image", "script", "xmlhttprequest"]
+      }
+    }
+  ]
+  

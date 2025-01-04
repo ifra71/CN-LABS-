@@ -1,0 +1,33 @@
+{
+    "manifest_version": 3,
+    "name": "Simple Ad Blocker",
+    "description": "Blocks ads on websites.",
+    "version": "1.0",
+    "permissions": [
+      "storage",
+      "declarativeNetRequest"
+    ],
+    "background": {
+      "service_worker": "background.js"
+    },
+    "content_scripts": [
+      {
+        "matches": ["<all_urls>"],
+        "js": ["content.js"]
+      }
+    ],
+    "host_permissions": [
+      "http://*/*",
+      "https://*/*"
+    ],
+    "declarative_net_request": {
+      "rule_resources": [
+        {
+          "id": "ad-blocking-rules",
+          "enabled": true,
+          "path": "adblock-rules.json"  
+        }
+      ]
+    }
+  }
+  
